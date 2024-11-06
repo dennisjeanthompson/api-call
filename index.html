@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Anime Image Viewer</title>
+    <title>Anime Images</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Anime Image Viewer</h1>
-    
-    <div class="image-container">
-        <img id="animeImage" src="" alt="Anime Image">
-    </div>
-    
-    <div class="info">
-        <p id="animeName"></p>
-        <p id="animeSource"></p>
-    </div>
-    
-    <div id="error"></div>
-    
-    <div>
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
+    <div class="container">
+        <h1>Anime Images</h1>
+        
+        <!-- Main content box -->
+        <div class="content-box">
+            <!-- Image box -->
+            <div class="image-box">
+                <img id="animeImage" src="" alt="Anime Image">
+                <div id="loading" class="loading">Loading...</div>
+            </div>
+            
+            <!-- Info -->
+            <div class="info">
+                <p id="animeName"></p>
+                <p id="animeSource"></p>
+            </div>
+        </div>
+
+        <!-- Error message -->
+        <div id="error" class="error"></div>
+        
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
