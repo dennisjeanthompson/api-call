@@ -1,7 +1,7 @@
-// Keep track of current page
+
 let currentPage = 1;
 
-// Get all the elements we need
+
 const animeImage = document.getElementById('animeImage');
 const animeName = document.getElementById('animeName');
 const animeSource = document.getElementById('animeSource');
@@ -10,12 +10,10 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const loading = document.getElementById('loading');
 
-// Function to show loading message
 function showLoading() {
     loading.style.display = 'block';
 }
 
-// Function to hide loading message
 function hideLoading() {
     loading.style.display = 'none';
 }
@@ -26,7 +24,7 @@ function showError(message) {
     errorDiv.textContent = message;
 }
 
-// Function to hide error message
+
 function hideError() {
     errorDiv.style.display = 'none';
 }
@@ -65,7 +63,6 @@ function fetchImage() {
             hideLoading();
         });
 
-    // Disable previous button if we're on first page
     prevBtn.disabled = currentPage === 1;
 }
 
@@ -83,9 +80,8 @@ function previousImage() {
     }
 }
 
-// Add click handlers to buttons
+
 prevBtn.addEventListener('click', previousImage);
 nextBtn.addEventListener('click', nextImage);
 
-// Load first image when page loads
 fetchImage();
